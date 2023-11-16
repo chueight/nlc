@@ -10801,7 +10801,7 @@ a {
 }
 
 :root {
-  --fc-small-font-size: .85em;
+  --fc-small-font-size: 1em;
   --fc-page-bg-color: #fff;
   --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
   --fc-neutral-text-color: #808080;
@@ -10918,9 +10918,7 @@ a {
 }
 
 .timeline .timeline-item .timeline-item-marker .timeline-item-marker-text {
-  font-size: 0.875rem;
-  width: 5rem;
-  color: #a7aeb8;
+  width: 7rem;
   text-align: center;
   margin-bottom: 0.5rem;
   display: block;
@@ -10974,14 +10972,9 @@ a {
   transform: translateX(0.875rem);
 }
 
-.timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-text {
-  font-size: 0.7rem;
-}
-
 .timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-indicator {
   height: 1.5rem;
   width: 1.5rem;
-  font-size: 0.875rem;
 }
 
 .timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-indicator .feather {
@@ -10990,7 +10983,6 @@ a {
 }
 
 .timeline.timeline-sm .timeline-item .timeline-item-content {
-  font-size: 0.875rem;
   padding-top: 0.15rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -11000,20 +10992,14 @@ a {
   transform: translateX(0.5625rem);
 }
 
-.timeline.timeline-xs .timeline-item .timeline-item-marker .timeline-item-marker-text {
-  font-size: 0.7rem;
-}
-
 .timeline.timeline-xs .timeline-item .timeline-item-marker .timeline-item-marker-indicator {
   height: 0.875rem;
   width: 0.875rem;
-  font-size: 0.875rem;
   border: 0.125rem solid #fff;
   margin-top: -0.125rem;
 }
 
 .timeline.timeline-xs .timeline-item .timeline-item-content {
-  font-size: 0.875rem;
   padding-top: 0;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
