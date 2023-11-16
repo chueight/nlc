@@ -1,0 +1,229 @@
+@import 'bootstrap-5.2.3/bootstrap.scss'
+
+html, body
+    letter-spacing: 0.04rem
+
+a
+    text-decoration: none
+
+.shadow-right
+    box-shadow: 0.15rem 0 1.75rem 0 rgba(33, 40, 50, 0.15)
+
+.bg-gradient-primary-to-secondary
+    background-color: #5a778f
+    background-image: linear-gradient(135deg, #5a778f 0%, rgba(117, 120, 154, 0.8) 100%)
+
+.pb-10
+    padding-bottom: 6rem
+
+.mt-n10
+    margin-top: -6rem
+
+.text-bg-light
+    color: #343a40 !important
+
+.page-header .page-header-content
+    padding-top: 3rem
+    padding-bottom: 3rem
+
+:root
+    --fc-small-font-size: .85em
+    --fc-page-bg-color: #fff
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3)
+    --fc-neutral-text-color: #808080
+    --fc-border-color: #ddd
+
+    --fc-button-text-color: #5A778F
+    --fc-button-bg-color: #eff1f4
+    --fc-button-border-color: #adbbc7
+    --fc-button-hover-text-color: #fff
+    --fc-button-hover-bg-color: #5A778F
+    --fc-button-hover-border-color: #5A778F
+    --fc-button-active-text-color: #fff
+    --fc-button-active-bg-color: #465d70
+    --fc-button-active-border-color: #415668
+    --fc-button-disabled-text-color: #adbbc7
+    --fc-button-disabled-bg-color: #eff1f4
+    --fc-button-disabled-border-color: #dee4e9
+
+    --fc-event-bg-color: #8ca0b1
+    --fc-event-border-color: #8ca0b1
+    --fc-event-text-color: #fff
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25)
+
+    --fc-more-link-bg-color: #d0d0d0
+    --fc-more-link-text-color: inherit
+
+    --fc-event-resizer-thickness: 8px
+    --fc-event-resizer-dot-total-width: 8px
+    --fc-event-resizer-dot-border-width: 1px
+
+    --fc-non-business-color: rgba(215, 215, 215, 0.3)
+    --fc-bg-event-color: rgb(143, 223, 130)
+    --fc-bg-event-opacity: 0.3
+    --fc-highlight-color: rgba(188, 232, 241, 0.3)
+    --fc-today-bg-color: rgba(90, 119, 143, 0.15)
+    --fc-now-indicator-color: red
+
+.fc
+    .weekend
+        background: #f8f3f3
+        a
+            color: #bb8282
+    .holiday
+        position: absolute
+        text-align: right
+        width: 6em
+        right: 3px
+        top: 25px
+    
+    .workday
+        background: unset !important
+
+        a
+            color: unset !important
+
+    &-button
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    .fc-button-primary:not(:disabled)
+        &.fc-button-active
+            color: var(--fc-button-active-text-color)
+        &:hover
+            color: var(--fc-button-hover-text-color)
+
+    .fc-button-primary:disabled
+        background-color: var(--fc-button-disabled-bg-color)
+        border-color: var(--fc-button-disabled-border-color)
+        color: var(--fc-button-disabled-text-color)
+    
+    .fc-col-header-cell-cushion[aria-label="星期日"], .fc-col-header-cell-cushion[aria-label="星期六"]
+        color: #bb8282
+    
+    td[data-date="2023-09-23"], td[data-date="2024-02-17"]
+        background: unset !important
+        a
+            color: #5a778f
+    
+    td[data-date="2023-09-29"], td[data-date="2023-10-09"], td[data-date="2023-10-10"], td[data-date="2024-01-01"], td[data-date="2024-02-08"],
+    td[data-date="2024-02-09"], td[data-date="2024-02-12"], td[data-date="2024-02-13"], td[data-date="2024-02-14"], td[data-date="2024-02-28"],
+    td[data-date="2024-04-04"], td[data-date="2024-04-05"], td[data-date="2024-06-10"], td[data-date="2024-09-17"], td[data-date="2024-10-10"]
+        background: #f8f3f3
+        a
+            color: #bb8282
+
+    .fc-h-event .fc-event-title-container
+        padding-left: 4px
+    
+    .fc-toolbar-title
+        font-size: 1.5rem
+
+.timeline:not(:last-child)
+    padding-bottom: 1.5rem
+    border-bottom: 1px dashed #a7aeb8
+    margin-bottom: 1.5rem
+
+.timeline
+    &:last-child
+        margin-bottom: 0.25rem
+
+.timeline .timeline-item
+    display: flex
+    align-items: flex-start
+
+.timeline .timeline-item .timeline-item-marker
+    display: inline-flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-bottom: 2rem
+
+.timeline .timeline-item .timeline-item-marker .timeline-item-marker-text 
+    font-size: 0.875rem
+    width: 5rem
+    color: #a7aeb8
+    text-align: center
+    margin-bottom: 0.5rem
+    display: block
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+.timeline .timeline-item .timeline-item-marker .timeline-item-marker-indicator 
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    height: 3rem
+    width: 3rem
+    background-color: #f2f6fc
+    border-radius: 100%
+
+.timeline .timeline-item .timeline-item-content 
+    padding-top: 0
+    padding-bottom: 2rem
+    padding-left: 1rem
+    width: 100%
+
+.timeline .timeline-item:last-child .timeline-item-content 
+    padding-bottom: 0 !important
+
+
+@media (min-width: 576px) 
+    .timeline .timeline-item .timeline-item-marker 
+        flex-direction: row
+        transform: translateX(1.625rem)
+        margin-bottom: 0
+  
+    .timeline .timeline-item .timeline-item-marker .timeline-item-marker-text 
+        margin-right: 0.5rem
+        margin-bottom: 0
+  
+    .timeline .timeline-item .timeline-item-content 
+        padding-top: 0.75rem
+        padding-bottom: 3rem
+        padding-left: 3rem
+        border-left: solid 0.25rem #f2f6fc
+  
+    .timeline .timeline-item:last-child .timeline-item-content 
+        border-left-color: transparent
+  
+.timeline.timeline-sm .timeline-item .timeline-item-marker 
+    transform: translateX(0.875rem)
+
+.timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-text 
+    font-size: 0.7rem
+
+.timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-indicator 
+    height: 1.5rem
+    width: 1.5rem
+    font-size: 0.875rem
+
+.timeline.timeline-sm .timeline-item .timeline-item-marker .timeline-item-marker-indicator .feather 
+    height: 0.75rem
+    width: 0.75rem
+
+.timeline.timeline-sm .timeline-item .timeline-item-content 
+    font-size: 0.875rem
+    padding-top: 0.15rem
+    padding-bottom: 1rem
+    padding-left: 1.5rem
+
+
+.timeline.timeline-xs .timeline-item .timeline-item-marker 
+    transform: translateX(0.5625rem)
+
+.timeline.timeline-xs .timeline-item .timeline-item-marker .timeline-item-marker-text 
+    font-size: 0.7rem
+
+.timeline.timeline-xs .timeline-item .timeline-item-marker .timeline-item-marker-indicator 
+    height: 0.875rem
+    width: 0.875rem
+    font-size: 0.875rem
+    border: 0.125rem solid #fff
+    margin-top: -0.125rem
+
+.timeline.timeline-xs .timeline-item .timeline-item-content 
+    font-size: 0.875rem
+    padding-top: 0
+    padding-bottom: 1rem
+    padding-left: 1.5rem
+
