@@ -4,7 +4,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700&display=swap");
 :root {
   --bs-blue: #5a778f;
   --bs-indigo: #75789a;
@@ -16,6 +16,7 @@
   --bs-green: #799f78;
   --bs-teal: #506C6A;
   --bs-cyan: #7CB6B2;
+  --bs-rice: #efefeb;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -30,24 +31,26 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #5a778f;
-  --bs-secondary: #75789a;
+  --bs-secondary: #6c757d;
   --bs-success: #799f78;
   --bs-info: #7CB6B2;
   --bs-warning: #dbb674;
   --bs-danger: #bb8282;
   --bs-light: #f8f9fa;
+  --bs-light2: #efefeb;
   --bs-dark: #212529;
   --bs-primary-rgb: 90, 119, 143;
-  --bs-secondary-rgb: 117, 120, 154;
+  --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 121, 159, 120;
   --bs-info-rgb: 124, 182, 178;
   --bs-warning-rgb: 219, 182, 116;
   --bs-danger-rgb: 187, 130, 130;
   --bs-light-rgb: 248, 249, 250;
+  --bs-light2-rgb: 239, 239, 235;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 52, 58, 64;
+  --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: "Noto Sans TC", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -56,7 +59,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #343a40;
+  --bs-body-color: #212529;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -86,8 +89,8 @@
 }
 
 .text-bg-secondary {
-  color: #000 !important;
-  background-color: RGBA(117, 120, 154, var(--bs-bg-opacity, 1)) !important;
+  color: #fff !important;
+  background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -115,6 +118,11 @@
   background-color: RGBA(248, 249, 250, var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-light2 {
+  color: #000 !important;
+  background-color: RGBA(239, 239, 235, var(--bs-bg-opacity, 1)) !important;
+}
+
 .text-bg-dark {
   color: #fff !important;
   background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
@@ -128,10 +136,10 @@
 }
 
 .link-secondary {
-  color: #75789a !important;
+  color: #6c757d !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #9193ae !important;
+  color: #565e64 !important;
 }
 
 .link-success {
@@ -167,6 +175,13 @@
 }
 .link-light:hover, .link-light:focus {
   color: #f9fafb !important;
+}
+
+.link-light2 {
+  color: #efefeb !important;
+}
+.link-light2:hover, .link-light2:focus {
+  color: #f2f2ef !important;
 }
 
 .link-dark {
@@ -630,6 +645,11 @@
 .border-light {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-light2 {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-light2-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-dark {
@@ -1494,6 +1514,11 @@
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-light2 {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-light2-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-dark {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
@@ -1583,6 +1608,11 @@
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-light2 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light2-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-dark {

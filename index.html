@@ -1,658 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>高級中等學校本土語文/臺灣手語彙整平臺．教育部國民及學前教育署</title>
-        <link rel="icon" type="image/png" href="assets/img/logo-icon.png">
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <title>高級中等學校本土語文/臺灣手語部編版教材申請．教育部國民及學前教育署</title>
+        <link rel="icon" type="image/png" href="images/logo-icon.png">
         <link href="css/style.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-              var calendarEl = document.getElementById('calendar');
-              
-              var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'dayGridMonth',
-                    locale: 'zh-tw',  // 使用字串 'zh-tw'
-                    buttonText: {
-                        today: '今天',
-                        month: '月',
-                        week: '週',
-                        day: '日',
-                        list: '清單'
-                    },
-                    headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,listMonth'
-                    },
-                    dayHeaderFormat: {
-                        weekday: 'narrow',
-                    },
-                    events: [
-                        {
-                            title: '112學年度第一學期 開學',
-                            start: '2023-08-30',
-                        },
-                        {
-                            title: '112學年度第二學期 開學',
-                            start: '2024-02-15',
-                        },
-                        {
-                            title: '112學年度第二學期 原住民語 教材申請',
-                            start: '2023-11-27',
-                            end: '2023-12-08',
-                            color: '#DBB674',
-                        },
-                        {
-                            title: '113學年度第一學期 原住民語 教材申請(第一階段)',
-                            start: '2024-06-11',
-                            end: '2024-07-05',
-                            color: '#DBB674'
-                        },
-                        {
-                            title: '113學年度第一學期 原住民語 教材申請(第二階段)',
-                            start: '2024-07-23',
-                            end: '2024-08-06',
-                            color: '#DBB674'
-                        },
-                        {
-                            title: '113學年度第一學期 原住民語 教材配送(第二階段)',
-                            start: '2024-08-01',
-                            end: '2024-08-23',
-                            color: '#DBB674'
-                        },
-                        // {
-                        //     title: '113學年度第一學期 原住民語 配送完成',
-                        //     start: '2024-08-23',
-                        //     end: '2024-08-23',
-                        //     color: '#DBB674'
-                        // },
-                        {
-                            title: '112學年度第二學期 閩南語/閩東語/客家語 教材申請',
-                            start: '2023-12-01',
-                            end: '2023-12-29',
-                            color: '#799f78'
-                        },
-                        {
-                            title: '113學年度第一學期 閩南語/閩東語/客家語 教材申請(第二階段)',
-                            start: '2024-07-23',
-                            end: '2024-08-06',
-                            color: '#799f78'
-                        },
-                        {
-                            title: '113學年度第一學期 閩南語/閩東語/客家語 教材配送(第二階段)',
-                            start: '2024-08-12',
-                            end: '2024-08-23',
-                            color: '#799f78'
-                        },
-                        // {
-                        //     title: '113學年度第一學期 閩南語/閩東語/客家語 配送完成',
-                        //     start: '2024-08-23',
-                        //     end: '2024-08-23',
-                        //     color: '#799f78'
-                        // },
-                        {
-                            title: '113學年度第一學期 閩南語/閩東語/客家語 加退換',
-                            start: '2024-09-02',
-                            end: '2024-09-13',
-                            color: '#799f78'
-                        },
-                        {
-                            title: '112學年度第二學期 臺灣手語 教材申請',
-                            start: '2023-11-27',
-                            end: '2023-12-08',
-                            color: '#7CB6B2'
-                        },
-                        {
-                            title: '112學年度第二學期 臺灣手語 教材配送',
-                            start: '2023-12-18',
-                            end: '2023-12-22',
-                            color: '#7CB6B2'
-                        },
-                        // {
-                        //     title: '112學年度第二學期 臺灣手語 配送完成',
-                        //     start: '2024-01-05',
-                        //     end: '2024-01-05',
-                        //     color: '#7CB6B2'
-                        // },
-                        {
-                            title: '113學年度第一學期 臺灣手語 教材申請(第一階段)',
-                            start: '2024-06-11',
-                            end: '2024-07-05',
-                            color: '#7CB6B2'
-                        },
-                        {
-                            title: '113學年度第一學期 臺灣手語 教材配送(第一階段)',
-                            start: '2024-07-22',
-                            end: '2024-07-26',
-                            color: '#7CB6B2'
-                        },
-                        {
-                            title: '113學年度第一學期 臺灣手語 教材申請(第二階段)',
-                            start: '2024-07-23',
-                            end: '2024-08-06',
-                            color: '#7CB6B2'
-                        },
-                        {
-                            title: '113學年度第一學期 臺灣手語 教材配送(第二階段)',
-                            start: '2024-08-12',
-                            end: '2024-08-16',
-                            color: '#7CB6B2',
-                           
-                        },
-                        // {
-                        //     title: '113學年度第一學期 臺灣手語 配送完成',
-                        //     start: '2024-08-23',
-                        //     end: '2024-08-23',
-                        //     color: '#7CB6B2'
-                        // },
-                    ],
-                    validRange: {
-                        start: '2023-08-30',
-                        end: '2024-12-31',
-                    },
-                    dayCellClassNames: function(arg) {
-                        if (arg.dow == 0 || arg.dow == 6) {
-                            return 'weekend';
-                        }
-                    },
-                    dayCellContent: function(arg) {
-                        console.log(arg.date)
-                        var dayText = arg.dayNumberText.replace('日', ''); // 移除 '日'
-                        if(arg.date.getDate() === 10 && arg.date.getMonth() === 9){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">國慶</span></span>',
-                            };
-                        } else if (arg.date.getDate() === 1 && arg.date.getMonth() === 0) {
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">元旦</span></span>',
-                            };
-                        } else if(arg.date.getDate() === 28 && arg.date.getMonth() === 1){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">和平紀念日</span></span>',
-                            };
-                        }  else if(arg.date.getDate() === 29 && arg.date.getMonth() === 8 && arg.date.getFullYear() == 2023){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">中秋</span></span>',
-                            };
-                        } else if(arg.date.getDate() === 9 && arg.date.getMonth() === 1 && arg.date.getFullYear() == 2024){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">除夕</span></span>',
-                            };
-                        } else if(arg.date.getDate() === 4 && arg.date.getMonth() === 3 && arg.date.getFullYear() == 2024){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">清明</span></span>',
-                            };
-                        } else if(arg.date.getDate() === 10 && arg.date.getMonth() === 5 && arg.date.getFullYear() == 2024){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">端午</span></span>',
-                            };
-                        } else if(arg.date.getDate() === 17 && arg.date.getMonth() === 8 && arg.date.getFullYear() == 2024){
-                            return {
-                                html: '<span class="text-danger">' + dayText + '<span class="holiday">中秋</span></span>',
-                            };
-                        }  else {
-                            return {
-                                html: dayText,
-                            };
-                        }
-                    },
-
-              });
-              calendar.render();
-            });
-        </script>
     </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand shadow navbar-light bg-white">
-            <!-- Navbar Brand-->
-            <img style="height: 30px;" class="me-2 ms-3 me-lg-0" src="assets/img/logo-icon.png" />
-            <a class="navbar-brand ps-3" href="index.html">高級中等學校本土語文/臺灣手語彙整平臺</a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 ms-auto me-3 me-lg-4" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <body style="background-image: url('images/bg.png')">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-5 justify-content-center">
+                <span class="navbar-brand"><img class="h-100 w-100" src="images/k-12-logo.webp" alt="k12ea"></span>
+            </div>
         </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-light shadow-right bg-white" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">部編版教材申請</div>
-                            <a class="nav-link" target="_blank" href="http://ebook.alcd.center/">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-feather"></i></div>
-                                原住民族語
+        <!-- Header-->
+        <header class="py-0 py-md-5">
+            <div class="container px-5" >
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="text-center my-5">
+                            <h1 class="fw-bolder mb-0">高級中等學校本土語文/臺灣手語<span class="d-inline d-md-block">部編版教材申請</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="feature row justify-content-center justify-content-lg-between my-3 my-md-5">
+                            <a class="feature-item link-warning col-lg-4 me-0 me-md-5 me-lg-0 mb-5 mb-lg-0 shadow text-decoration-none" style="background-image: url('images/1.png')" href="http://ebook.alcd.center/" target="_blank">
+                                <h3 class="h4 fw-bolder feature-title"><span class="badge rounded-pill text-body">原住民語</span></h3>
                             </a>
-                            <a class="nav-link" target="_blank" href="https://order.jen-pin.com.tw/login.php">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-earth-asia"></i></div>
-                                閩南語/閩東語/客家語
+                            <a class="feature-item link-warning col-lg-4 ms-0 ms-md-5 ms-lg-0 mb-5 mb-lg-0 shadow text-decoration-none" style="background-image: url('images/2.png')" href="https://order.jen-pin.com.tw/login.php" target="_blank">
+                                <h3 class="h4 fw-bolder feature-title"><span class="badge rounded-pill text-body">閩客語</span></h3>
                             </a>
-                            <a class="nav-link" target="_blank" href="https://reurl.cc/V422m5">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-hands"></i></div>
-                                臺灣手語
+                            <a class="feature-item link-warning col-lg-4  mb-5 mb-lg-0 shadow text-decoration-none" style="background-image: url('images/3.png')" href="https://reurl.cc/V422m5" target="_blank">
+                                <h3 class="h4 fw-bolder feature-title"><span class="badge rounded-pill text-body">臺灣手語</span></h3>
                             </a>
                         </div>
                     </div>
-                </nav>
+                    
+                </div>
             </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
-                        <div class="container-xl px-4">
-                            <div class="page-header-content pt-4">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto mt-4 text-white">
-                                        <h1 class="page-header-title">
-                                            <div class="page-header-icon d-inline-flex"><i class="fa-solid fa-book opacity-50" style="width:24px; height:24px;"></i></div>
-                                            部編版教材申請及配送期程
-                                        </h1>
-                                        <div class="page-header-subtitle opacity-50"></div>
-                                    </div>
-                                    <div class="col-12 col-xl-auto mt-4">
-                                        <div class="d-flex align-items-center text-white">
-                                            <i class="fa-solid fa-calendar-day me-2 small"></i>
-                                            <span id="current_date"></span>
-                                            <script>
-                                                var currentDate = new Date();
-
-                                                var year = currentDate.getFullYear();
-                                                var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-                                                var day = currentDate.getDate().toString().padStart(2, '0');
-                                                var dayOfWeek = ['日', '一', '二', '三', '四', '五', '六'][currentDate.getDay()];
-                                                var hours = currentDate.getHours().toString().padStart(2, '0');
-                                                var minutes = currentDate.getMinutes().toString().padStart(2, '0');
-
-                                                var formattedDate = year + '-' + month + '-' + day;
-
-                                                document.getElementById("current_date").innerHTML = formattedDate;
-                                            </script>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                    <div class="container-xl px-4 mt-n10">
-                        
-                        <!-- Example DataTable for Dashboard Demo-->
+        </header>
+        <!-- Testimonials section-->
+        <section class="py-5 schedule">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <h2 class="">配送期程</h2>
+                    <p class="lead mb-0">原住民語統一時段配送<br>閩客語、臺灣手語分階段配送</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-9">
+                        <!-- Testimonial 1-->
                         <div class="card border-0 shadow mb-4">
-                            <div class="card-header text-primary fw-bold">行事曆</div>
-                            <div class="card-body">
-                                <div id='calendar'></div>
+                            <h5 class="card-header bg-primary text-white d-flex flex-column flex-md-row align-items-center py-3 px-4"><i class="fa-regular fa-calendar-days small me-0 me-md-1 mb-1 mb-md-0"></i>112學年度<div class="mt-1 mt-md-0">第一學期</div></h5>
+                            <div class="card-body p-4">
+                                <a href="images/112-1.jpg" target="_blank"><img class="w-100" src="images/112-1.jpg" alt=""></a>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xxl-4 col-xl-6 mb-4">
-                                <div class="card border-0 shadow card-header-actions h-100">
-                                    <a target="_blank" href="https://ebook.alcd.center/"><div class="card-header text-primary fw-bold d-flex align-items-center justify-content-between">
-                                        <span><i class="fa-solid fa-feather me-2 small"></i>原住民族語</span><i class="fa-solid fa-arrow-up-right-from-square small"></i>
-                                    </div></a>
-                                    <div class="card-body">
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">112學年度第二學期</span>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-11-27</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-12-08</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請結束
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text"></div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text"></div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">113學年度第一學期</span>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-06-11</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請I
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-05</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請I結束
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 1-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請II
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-01</div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送II
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-06</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請II結束
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Testimonial 2-->
+                        <div class="card border-0 shadow mb-4">
+                            <h5 class="card-header bg-primary text-white d-flex flex-column flex-md-row align-items-center py-3 px-4"><i class="fa-regular fa-calendar-days small me-0 me-md-1 mb-1 mb-md-0"></i>112學年度<div class="mt-1 mt-md-0">第二學期</div></h5>
+                            <div class="card-body p-4">
+                                <a href="images/112-2.jpg" target="_blank"><img class="w-100" src="images/112-2.jpg" alt=""></a>
                             </div>
-                            <div class="col-xxl-4 col-xl-6 mb-4">
-                                <div class="card border-0 shadow card-header-actions h-100">
-                                    <a target="_blank" href="https://order.jen-pin.com.tw/login.php"><div class="card-header text-primary fw-bold d-flex align-items-center justify-content-between">
-                                        <span><i class="fa-solid fa-earth-asia me-2 small"></i>閩南語/閩東語/客家語</span><i class="fa-solid fa-arrow-up-right-from-square small"></i>
-                                    </div></a>
-                                    <div class="card-body">
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">112學年度第二學期</span>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-12-01</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-12-29</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請結束
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text"></div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text"></div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">113學年度第一學期</span>
-                                            <!-- Timeline Item 1-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請II
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-06</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請II結束
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-12</div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送II
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-09-02</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    加換退
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-09-13</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    加換退結束
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xxl-4 col-xl-6 mb-4">
-                                <div class="card border-0 shadow card-header-actions h-100">
-
-                                        <a target="_blank" href="https://reurl.cc/V422m5"><div class="card-header text-primary fw-bold d-flex align-items-center justify-content-between">
-                                            <span><i class="fa-solid fa-hands me-2 small"></i>臺灣手語</span><i class="fa-solid fa-arrow-up-right-from-square small"></i>
-                                        </div></a>
-
-                                    <div class="card-body">
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">112學年度第二學期</span>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-11-27</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-12-08</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請結束
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2023-12-18</div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-01-05</div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline timeline-xs">
-                                            <!-- Timeline Item 1-->
-                                            <span class="badge rounded-pill text-bg-light mb-3">113學年度第一學期</span>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-06-11</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請I
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-05</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請I結束
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-22</div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送I
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 1-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-07-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-secondary"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材申請II
-                                                </div>
-                                            </div>
-                                             <!-- Timeline Item 1-->
-                                             <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-06</div>
-                                                    <div class="timeline-item-marker-indicator bg-danger"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    申請II結束
-                                                </div>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-12</div>
-                                                    <div class="timeline-item-marker-indicator bg-info"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    教材配送II
-                                                </div>
-                                            </div>
-                                            <!-- Timeline Item 2-->
-                                            <div class="timeline-item">
-                                                <div class="timeline-item-marker">
-                                                    <div class="timeline-item-marker-text">2024-08-23</div>
-                                                    <div class="timeline-item-marker-indicator bg-success"></div>
-                                                </div>
-                                                <div class="timeline-item-content">
-                                                    配送完成
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <!-- Testimonial 3-->
+                        <div class="card border-0 shadow mb-4">
+                            <h5 class="card-header bg-primary text-white d-flex flex-column flex-md-row align-items-center py-3 px-4"><i class="fa-regular fa-calendar-days small me-0 me-md-1 mb-1 mb-md-0"></i>113學年度<div class="mt-1 mt-md-0">第二學期</div></h5>
+                            <div class="card-body p-4">
+                                <a href="images/113-1.jpg" target="_blank"><img class="w-100" src="images/113-1.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
-                </main>
-                <footer class="py-4 mt-auto">
-                    <div class="container-xl px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; 教育部國民及學前教育署 2023</div>
-                        </div>
-                    </div>
-                </footer>
+                </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-light2">
+            <div class="container px-5"><p class="m-0 text-center">Copyright &copy; <a class="text-decoration-none text-body" href="https://www.k12ea.gov.tw/" target="_blank">教育部國民及學前教育署</a></p></div>
+        </footer>
     </body>
 </html>
